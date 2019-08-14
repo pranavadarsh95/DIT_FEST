@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DIT FEST</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="images/start.png" />
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Pranav Adarsh,my other websites:-course4coders.site90.com"/>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    //width: auto;
+    padding: 5px 8px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "RAVIE",sans-serif;
+  color: red;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black ;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: LawnGreen  ;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+.bgimg-1, .bgimg-2, .bgimg-3{
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("images/ditfest.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("images/usedpic.jpg");
+  min-height: 500px;
+}
+
+.bgimg-3 {
+  background-image: url("images/basketball1.jpg");
+  min-height: 400px;
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+
+<body>
+
+     
+<nav>
+  <ul  class="w3-navbar w3-black">
+
+   
+    <li style="color:yellow"><a href="login.html">REGISTER</a></li>
+    <li style="color:yellow"><a href="workunder.html">SCHEDULE</a></li>
+    <li style="color:yellow"><a href="workunder.html">SPONSORS</a></li>
+    <li style="color:yellow"><a href="login.html">LOGIN</a></li>
+    <li style="color:yellow"><a href="signup.html">SIGNUP</a></li>
+    
+      <!--android app information-->
+
+
+       <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;background-color:yellow;color:black;margin-left:5%;"><li>DIT UNIVERSITY APP</li></button>
+       <div id="id02" class="modal">
+  
+         <form class="modal-content animate" action="action_page.php">
+         <div class="imgcontainer">
+         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+         </div>
+          <center><h1 style="color:brown;"> DIT FEST </h1></center>      
+         <center style="margin-top:2%;"><a href="https://github.com/pranavadarsh95/DIT-UNIVERSITY-APP/blob/master/DITUNIVERSITY.apk?raw=true"><img src="images/messa.png" alt="COURSE4CODERS" ></a></center>
+      <center><h2 style="color:black;">To Get Always Connected Download Our Android App </br> DIT UNIVERSITY</h2></center>
+
+        <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      
+      </div>
+    </form>
+  </div>
+
+   <script>
+
+   var modal = document.getElementById('id02');
+
+   window.onclick = function(event) {
+       if (event.target == modal) {
+            modal.style.display = "none";
+       }
+    }
+    </script>
+
+ <!--android app information end-->
+
+
+   <!--side nav start-->
+     
+         <div id="mySidenav" class="sidenav" style=" margin-left:30%;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h1><a href="login.html" style="border-bottom:2px solid #bbb;border-color:red;">Technical Events</a></h1>
+  <h1><a href="login.html" style="border-bottom:2px solid #bbb;border-color:red;">Gaming Events</a></h1>
+  <h1><a href="login.html" style="border-bottom:2px solid #bbb;border-color:red;">Literary & Fine Arts Events</a></h1>
+  <h1><a href="workunder.html" style="border-bottom:2px solid #bbb;border-color:red;">Workshops</a></h1>
+  <h1><a href="workunder.html" style="border-bottom:2px solid #bbb;border-color:red;">Lectures</a></h1>
+  <h1><a href="workunder.html" style="border-bottom:2px solid #bbb;border-color:red;">Exhibitions</a></h1>
+  <h1><a href="login.html" style="border-bottom:2px solid #bbb;border-color:red;">REGISTER</a></h1>
+  <h1><a href="login.html" style="border-bottom:2px solid #bbb;border-color:red;">OTHER</a></h1>
+</div>
+
+<span style="font-size:30px;margin-left:8%;cursor:pointer;color:white" onclick="openNav()">&#9783;OPEN EVENTS</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+  <!--side nav end-->
+
+
+</ul>
+</nav>  
+
+
+<section>
+   
+  <img class="mySlides" src="images/pic2.jpg"  width="100%" height="500"/>
+  <img class="mySlides" src="images/pic4.jpg"  width="100%" height="500"/>
+  <img class="mySlides" src="images/bg.jpg"  width="100%" height="500"/>
+  <img class="mySlides" src="images/pic5.jpg"  width="100%" height="500"/>
+  <img class="mySlides" src="images/pic1.jpg" width="100%" height="500"/>
+  <img class="mySlides" src="images/pic50.jpg" width="100%" height="500"/>
+  <img class="mySlides" src="images/pic6.jpg" width="100%" height="500"/>
+  <img class="mySlides" src="images/pic10.jpg" width="100%" height="500"/>
+  <img class="mySlides" src="images/pic5.jpg" width="100%" height="500"/>
+  <img class="mySlides" src="images/pic19.jpg" width="100%" height="500"/>
+</section>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;color:red;">ABOUT DEVELOPER</button>
+
+<div id="id01" class="modal" >
+  
+  <form class="modal-content animate" action="action_page.php" style="background-color:BurlyWood;">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/pic21.png" alt="Avatar" class="avatar" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="images/pic26.jpg" alt="Avatar" class="avatar">
+     <h3 style="color:red;font-family:Ravie;">PRANAV ADARSH &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp RUCHI KUMARI</h3>
+      <img src="images/pic25.jpg" alt="Avatar" class="avatar">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="images/pic30.jpg" alt="Avatar" class="avatar">
+      <h3 style="color:red;font-family:Ravie;">RICHA JOSHI &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SHIVENDU AGARWAL</h3>   
+    </div>
+                
+    
+    
+    
+   
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</span>
+  </div>
+</div>
+
+<div style="color:white;background-color:LightSlateGrey;text-align:center;padding:50px 80px;text-align: justify;">
+  <h1 style="text-align:center;font-family:Ravie;color:black;">INITIATIVES</h1>
+  <p>"A simple idea can inspire, motivate and produce a change. With an aim to reach the goal of an ideal world, each year we take up social initiatives 
+that inspire dedicated and hardworking volunteers from all ages and walks of life, to come together and be the change they want to see."</p>
+<center><h3 style="color:Tan;font-family:Ravie;">EXPLORE MORE</h3></center>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: green;">What we think, we become</span><br/>
+     <span class="border" style="background-color:transparent;font-size:25px;color: green;">If opportunity doesn't knock, build a door</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <center><p>DIT UNIVERSITY FEST</p></center>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;font-family:Ravie;color:black;">ASK ANY QUERRY</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <center><p>INDIA'S LARGEST SCIENCE AND TECHNOLOGY FESTIVAL</p><center>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">STAY TUNED 2017 FEST COMING SOON</span>
+  </div>
+</div>
+
+
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide" style="font-family:Ravie;color:black;">LEARN WITH JOY</h2>
+  <p class="w3-opacity" style="color:green;"><i>EXPLORE IDEA'S</i></p>
+  
+  <p class="w3-justify"><center><h1 style="color:black;font-family:Ravie;">COMPETITIONS</h1></center>
+<p>"Technology never ceases to amaze us with its prodigious involvement in our daily life. 
+In this era of technological advancement and spirit of leaping forward in every way, 
+we invite you to melt your brains in the web of competitions which seek the knack of acting 
+upon mean materials and circuits.
+ Get ready and think hard to aim for extremely mind bending competitions of this edition."</p>
+<center><h3 style="color:Tan;font-family:Ravie;">C.A.R. Hoare</h3></center>
+<p></p>
+<center><h1 style="color:black;font-family:Ravie;">WORKSHOPS</h1></center>
+<p>"Have you always been inquisitive of the cutting edge technology and want an enriching experience 
+while learning them? Or do you want to interact with the students sharing common interest and 
+dive deep into the subject. If yes, then workshops at Techfest bring you face to face with the 
+latest technology 
+while providing you valuable hands-on experience under the guidance of renowned professionals."</p>
+<center><h3 style="color:Tan;font-family:Ravie;">Richard A. O'Keefe</h3></center>
+<p></p>
+<p></p>
+<center><h1 style="color:black;font-family:Ravie;">LECTURES</h1></center>
+<p>"Eminent personalities, exotic topics and enlightening insights - a segment dedicated to 
+spreading excellence. Lecture series aims at helping millions of young minds realize their 
+dreams by giving them a platform where they can interact with ingenious personalities
+ from all over the world and have an experience of a lifetime."</p>
+<center><h3 style="color:Tan;font-family:Ravie;">pixadel</h3></center>
+<p></p></p>
+<center><h1 style="color:black;font-family:Ravie;">EXHIBITIONS</h1></center>
+<p>"From showcasing the technologies of the times of ancient civilizations to the modern out of 
+the box innovations, Exhibitions at Techfest plays host to the technological avant-garde, satisfying
+ the inquisitive vigor of spiraling queues and massive hordes every year. 
+This segment offers a sneak peek into the future that is guaranteed to take your breath away."</p>
+<center><h3 style="color:Tan;font-family:Ravie;">pixadel</h3></center>
+<p></p></p>
+</section>
+
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>IMAGINE</p>
+    <img src="images/pic7.jpg" alt="Random Name" style="width:100%">
+    <p>SHOW YOUR TALENT</p>
+  </article>
+  <article class="w3-third">
+    <p>ASPIRE</p>
+    <img src="images/pic8.jpg" alt="Random Name" style="width:100%">
+    <p>REGISTER FAST SEAT LIMITED</p>
+  </article>
+  <article class="w3-third">
+    <p>ACHIEVE</p>
+    <img src="images/pic9.jpg" alt="Random Name" style="width:100%">
+    <p>HISTORY NEVER REPEATS ITSELF</p>
+  </article>
+</section>
+
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Designed by <a href="" target="_blank">PRANAV ADARSH | RUCHI KUMARI | RICHA KUMARI |SHIVENDU AGARWAL</a><br/>
+  DIT UNIVERSITY Android App link <a href="https://github.com/pranavadarsh95/DIT-UNIVERSITY-APP/blob/master/DITUNIVERSITY.apk?raw=true" target="_self">READY TO EXPLORE</a>
+  </p>
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
+
+</body>
+</html>

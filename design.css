@@ -1,0 +1,95 @@
+#side01 {
+    border: 1px solid red;
+    margin: 50px;
+    text-size:100; 
+}
+
+#img01 {
+    border: 2px solid black;
+    background-color: green;
+
+}
+
+#dd01 {
+    background-color:dimgrey;
+    border: 2px solid red;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right:2px solid black;
+    border-left:2px solid black;
+} 
+
+#find{
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+#findnav
+     {
+      border-bottom:2px solid #bbb;
+      border-color:red;
+     }
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+
+#small1
+{
+ background-image: url("images/facebook.jpg");
+  background-size: 280px 100px;
+ border: 2px solid black;
+    height:100px;
+}
+#small2
+{
+ background-image: url("images/gmail.jpg");
+  background-size: 280px 100px;
+ border: 2px solid black;
+    height:100px;
+}
+#small3
+{
+ background-image: url("images/twitter.png");
+  background-size: 280px 100px;
+ border: 2px solid black;
+    height:100px;
+}
+#small4 
+{
+   background-image: url("images/youtube.png");
+   background-size: 280px 100px;
+   border: 2px solid black;
+   height:100px;
+}
+#rcorners1 {
+    border-radius:55%;
+    background: darkcyan;
+    color:FloralWhite;
+    padding: 3%;     
+}
+#backcorner1
+{
+background-color:orange;
+width:50%;
+border-radius:55%;
+}

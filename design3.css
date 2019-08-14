@@ -1,0 +1,20 @@
+#homearea
+{
+    float: right;
+    width: 20%;
+    height: 30%;
+    border-radius: 9% 9% 9%;
+    font-size: 100%;
+    background-color:HoneyDew;
+    margin-top:0%;
+    margin-right:10%;
+}
+
+#insidehome
+{
+  width: 80%;
+  height:30px;
+  color:white;
+  border: 2px solid yellow;
+  background-color:LightCoral;"
+}
