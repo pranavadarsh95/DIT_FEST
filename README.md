@@ -1,12 +1,12 @@
 # DIT_FEST
 
 # 1301051070– Pranav Adarsh<br/>
-# 1301051096 – Shivendu Agarwal<br/> 
-# 1301051086 – Ruchi Kumari<br/>
-# 1301051081 – Richa Joshi<br/>
-# Under the guidance of<br/>
+ 1301051096 – Shivendu Agarwal<br/> 
+ 1301051086 – Ruchi Kumari<br/>
+ 1301051081 – Richa Joshi<br/>
+ Under the guidance of<br/>
 # Mr. Kushal Gupta, Assistant Professor<br/>
-# Department of Computer Science<br/>
+ Department of Computer Science<br/>
 ![](images2/Screenshot1.png)<br/>
 
 This project is based on the college fest which is actually a website made in php so that each one can get update of event in a college. This includes college schedule events, sponsors of event online and assign student for event. In this we can update and manage the events.
