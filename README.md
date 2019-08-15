@@ -1,11 +1,11 @@
 # DIT_FEST
 
-# 1301051070– Pranav Adarsh<br/>
+ 1301051070– Pranav Adarsh<br/>
  1301051096 – Shivendu Agarwal<br/> 
  1301051086 – Ruchi Kumari<br/>
  1301051081 – Richa Joshi<br/>
  Under the guidance of<br/>
-# Mr. Kushal Gupta, Assistant Professor<br/>
+ Mr. Kushal Gupta, Assistant Professor<br/>
  Department of Computer Science<br/>
 ![](images2/Screenshot1.png)<br/>
 
